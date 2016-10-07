@@ -43,28 +43,16 @@
 
 	```bash
 	apic loopback
+	```
+	
+	このコマンドでアプリケーション開発ツールが起動し、新規開発プロジェクトの作業をサポートしてくれます。アプリケーション名に hello-world を入力します。次の質問に対しては、Enterキーを押します。アプリケーション種類に関しては、 empty-server を選択し、Enterキーを押します。
+
+	```
 	? What's the name of your application? (student) hello-world
-	```
-	
-	このコマンドでアプリケーション開発ツール Yeoman が起動し、新規開発プロジェクトの作業をサポートしてくれます。表示される 3 つの質問に対しては、それぞれ Enter キーを押します。	
-	```
-	     _-----_
-	    |       |    .--------------------------.
-	    |--(o)--|    |  Let's create a LoopBack |
-	   `---------´   |       application!       |
-	    ( _´U`_ )    '--------------------------'
-	    /___A___\
-	     |  ~  |
-	   __'.___.'__
-	 ´   `  |° ´ Y `
-	
-	? What's the name of your application? hello-world
-	? Enter name of the directory to contain the project: hello-world
-	   create hello-world/
-	     info change the working directory to hello-world
-	
-	? What kind of application do you have in mind? hello-world (A project containing a basic working e
-	xample, including a memory database)
+	? Enter name of the directory to contain the project: (hello-world)
+	? What kind of application do you have in mind? (Use arrow keys)
+	> empty-server (An empty LoopBack API, without any configured models or datasources)
+
 	```
 	
 	これで、「hello-world」というアプリケーションが、同じ名前のディレクトリーの下に作成されます。このアプリケーションは基本的な Hello World アプリケーションです。コマンドラインのウィンドウには多くのメッセージが表示されますが、リソースがいくつか作成され、さまざまなノード・モジュールがインストールされているためです。ノード・モジュールがロードされ次第、プロセスは Swagger 定義と製品定義を作成します。プロセスの最後には、次のタスクについてヒントが提示されます。次のタスクをせっかく提案してくれているので、1 つ目のタスクだけでも実行してみましょう。
