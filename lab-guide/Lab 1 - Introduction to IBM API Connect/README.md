@@ -45,7 +45,7 @@
 	apic loopback
 	```
 	
-	このコマンドでアプリケーション開発ツールが起動し、新規開発プロジェクトの作業をサポートしてくれます。アプリケーション名に hello-world を入力します。次の質問に対しては、Enterキーを押します。アプリケーション種類に関しては、 デフォルトの hello-world を選択し、Enterキーを押します。
+	このコマンドでアプリケーション開発ツールが起動し、新規開発プロジェクトの作業をサポートしてくれます。アプリケーション名に hello-world を入力します。次の質問に対しては、Enterキーを押します。アプリケーション種類に関しては、 デフォルトの notes を選択し、Enterキーを押します。
 
 	```
 	? What's the name of your application? (student) hello-world
@@ -53,9 +53,9 @@
 	? What kind of application do you have in mind? (Use arrow keys)
 	  empty-server (An empty LoopBack API, without any configured models or datasour
 	ces)
-	> hello-world (A project containing a controller, including a single vanilla Mes
+	  hello-world (A project containing a controller, including a single vanilla Mes
 	sage and a single remote method)
-	  notes (A project containing a basic working example, including a memory databa
+	> notes (A project containing a basic working example, including a memory databa
 	se)
 
 	```
@@ -72,14 +72,13 @@
 
 	```bash
 	$ ls
-	client  common  deinitions  node_modules  package.json  server
+	common  deinitions  node_modules  package.json  server
 	```
 	
 	LoopBack あるいは Node.js アプリケーションに関する知識がある人は、いくつかのディレクトリーに見覚えがあるでしょう。経験の浅い人たちのために、作成されるいくつかのディレクトリーの説明を一覧にしました。
 
 |ディレクトリーまたはファイル|説明|
 |-----------------|-----------|
-|client|アプリケーションにフロントエンドがある場合、HTML、CSS、JavaScript などが格納されるディレクトリー。今回のサンプル・アプリケーションでは、スタブ・ファイルである README.md のみを格納|
 |common|サーバーとクライアント・アプリケーションの両方に共通するファイル|
 |common/models|すべてのモデル JSON ファイルおよびモデル JavaScript ファイルが格納されるサブディレクトリー。ここでいうモデルとはデータ・モデルを指す|
 |common/models/note.js|note データ・モデルのカスタム・スクリプト。このファイルには、モデル定義ファイルで定義されているメソッドの実装が含まれる|
@@ -97,7 +96,7 @@
 
 > ![][info]
 >
-> クライアント・ディレクトリーにあるような `*.md` ファイルは社内資料に使用されるマークダウン・ファイルです。
+> その他`*.md` ファイルは社内資料に使用されるマークダウン・ファイルです。
 
 # 1.2	-  `hello-world` アプリケーションの起動
 
