@@ -45,13 +45,18 @@
 	apic loopback
 	```
 	
-	このコマンドでアプリケーション開発ツールが起動し、新規開発プロジェクトの作業をサポートしてくれます。アプリケーション名に hello-world を入力します。次の質問に対しては、Enterキーを押します。アプリケーション種類に関しては、 empty-server を選択し、Enterキーを押します。
+	このコマンドでアプリケーション開発ツールが起動し、新規開発プロジェクトの作業をサポートしてくれます。アプリケーション名に hello-world を入力します。次の質問に対しては、Enterキーを押します。アプリケーション種類に関しては、 デフォルトの hello-world を選択し、Enterキーを押します。
 
 	```
 	? What's the name of your application? (student) hello-world
 	? Enter name of the directory to contain the project: (hello-world)
 	? What kind of application do you have in mind? (Use arrow keys)
-	> empty-server (An empty LoopBack API, without any configured models or datasources)
+	  empty-server (An empty LoopBack API, without any configured models or datasour
+	ces)
+	> hello-world (A project containing a controller, including a single vanilla Mes
+	sage and a single remote method)
+	  notes (A project containing a basic working example, including a memory databa
+	se)
 
 	```
 	
