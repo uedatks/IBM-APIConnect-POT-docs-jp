@@ -128,13 +128,13 @@
 
 # 1.3	- `hello-world` アプリケーションのテスト
 
-1. `Explore` ボタンをクリックし、API Explorer ビューに切り替えます。
+1. `探索` ボタンをクリックし、API Explorer ビューに切り替えます。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/explore.png)
+	![](../img/lab1/explore_jp.png)
 	
 	公開されているすべてのサービス・パスが表示されます。
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/exploreScreen.png)
+	![](../img/lab1/exploreScreen_jp.png)
 
 2. では、Explore 画面に表示されている GUI を使用して、サービスをテストします。左側にはいくつかの REST サービスが定義されています。今回は、`POST /notes` および `GET /notes` を取り上げます。
 
@@ -142,47 +142,47 @@
 	
 3. まずはいくつか note を作成してみましょう。画面左の欄にある `POST /notes` リンクをクリックします。`POST /notes` サービスに関連した情報とコントロールが表示されるように、他の欄の情報が展開されます。
 
-4. 作成した note をテストするために、`Call operation` ボタンが見えるまで、右の欄をスクロールダウンします。`Call operation` ボタンの上にある `Generate` リンクを使ってサービスをテストする呼び出しに使うダミー・データを生成します。
+4. 作成した note をテストするために、`操作の呼び出し` ボタンが見えるまで、右の欄をスクロールダウンします。`操作の呼び出し` ボタンの上にある `生成` リンクを使ってサービスをテストする呼び出しに使うダミー・データを生成します。
 
-5. `Generate` リンクをクリックし、サンプル・データを生成します。
+5. `生成` リンクをクリックし、サンプル・データを生成します。
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/generate-data.png)
+	![](../img/lab1/generate-data_jp.png)
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/generate.png)
+	![](../img/lab1/generate_jp.png)
 	
 	実際ご利用の端末で生成されるデータは異なりますが、これでテストを開始する準備が整いました。
 	
-6. `Call operation` ボタンをクリックして、`Response` セクションまでスクロールダウンし、結果を確認します。
+6. `操作の呼び出し` ボタンをクリックして、`応答` セクションまでスクロールダウンし、結果を確認します。
 	
-	結果内容に、`Code: 200 OK` と表示されているはずです。これは、新しい `note` が生成されたことを意味します。同じ結果がでなかった場合、以下のトラブルシューティングの手順を参照してください。
+	結果内容に、`コード: 200 OK` と表示されているはずです。これは、新しい `note` が生成されたことを意味します。同じ結果がでなかった場合、以下のトラブルシューティングの手順を参照してください。
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/POST-results.png)
+	![](../img/lab1/POST-results_jp.png)
 	
 	> ![][troubleshooting]
 	>
-	> CORS の問題を示すエラー・メッセージが表示される場合、お使いのブラウザーの証明書に問題があります。修復するために提示されたリンクをクリックして、証明書を受け入れ、開いているタブを閉じてから、`Call operation` 操作を再試行してください。また、手順 5 は省略しないようにご注意ください。ペイロードを生成せずに `POST` 操作を実行するとエラーが発生します。
+	> CORS の問題を示すエラー・メッセージが表示される場合、お使いのブラウザーの証明書に問題があります。修復するために提示されたリンクをクリックして、証明書を受け入れ、開いているタブを閉じてから、`操作の呼び出し` 操作を再試行してください。また、手順 5 は省略しないようにご注意ください。ペイロードを生成せずに `POST` 操作を実行するとエラーが発生します。
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/CORS-support-error.png)
+	![](../img/lab1/CORS-support-error_jp.png)
 	
 	> ![][troubleshooting]
   >
-  > 以下のようなコード 500 のエラーが発生した場合、`Generate` ボタンをクリックしてから、`Call operation` 操作を再試行してください。この手順を踏まないと note が重複して作成されてしまいます。
+  > 以下のようなコード 500 のエラーが発生した場合、`生成` ボタンをクリックしてから、`操作の呼び出し` 操作を再試行してください。この手順を踏まないと note が重複して作成されてしまいます。
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/duplicateRecordError.png)
+	![](../img/lab1/duplicateRecordError_jp.png)
 
 7. note が 1 つ作成できたところで、他にもいくつか note を作成してみましょう。
 
 	> ![][info]
 	> 
-	> `Generate` リンクの使用は必須ではなく、`Parameters` に直接データを入力する方法もあります。`Generate` 操作でテンプレートを作成して、それを使用して生成されたパラメーターを変更することもできます。ただし、すべてのパラメーターが必ず生成されるわけではありません。というのも、必須のパラメーターは `title` のみであるためです。`Generate` 操作を数回繰り返し、操作の感触をつかみましょう。
+	> `生成` リンクの使用は必須ではなく、`パラメーター` に直接データを入力する方法もあります。`生成` 操作でテンプレートを作成して、それを使用して生成されたパラメーターを変更することもできます。必須のパラメーターは `title` のみですが、全てのパラメーターが生成されます。`生成` 操作を数回繰り返し、操作の感触をつかみましょう。
 	
 8. 最後に `GET /notes` サービスをテストしましょう。ここまでに複数の note を作成してあるはずです。左の欄の `GET /notes` リンクをクリックします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/get-notes.png)
+	![](../img/lab1/get-notes_jp.png)
 
-9. `Call operation` ボタンまでスクロールダウンしてクリックし、結果までスクロールダウンします。
+9. `操作の呼び出し` ボタンまでスクロールダウンしてクリックし、結果までスクロールダウンします。
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/GET-results.png)
+	![](../img/lab1/GET-results_jp.png)
 		
 	結果セットに作成したすべての note が表示されているはずです。
 		
@@ -190,11 +190,11 @@
 	> 
 	> 結果として空の配列 `[]` が返された場合、note が正しく作成されていないことを意味します。もしくは、アプリケーションを停止し、再起動した場合にも同じ結果が返されます。hello-world の例では、インメモリーのデータベースを利用しているため、ディスクにはいかなるデータも一切保存されません。つまり、サーバーを停止・再起動するとデータは失われます。アプリケーションを永続データ・ソースに接続する手順は、Lab 2 で説明します。
 
-10. これで、アプリケーションのローカル・テストは終了です。`Run` ボタンをクリックし、アプリケーションのスタート画面に戻ります。
+10. これで、アプリケーションのローカル・テストは終了です。
 
-11. `Stop` ボタンをクリックして、アプリケーションを停止します。
+11. 画面下の`Stop` ボタンをクリックして、アプリケーションを停止します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/stop-app.png)
+	![](../img/lab1/stop-app_jp.png)
 
 # 1.4	-  API の開発者ポータルへの公開
 
