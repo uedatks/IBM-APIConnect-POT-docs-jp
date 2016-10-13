@@ -43,40 +43,30 @@
 
 ## 2.2 - 在庫アプリケーションの作成
 
-API Connect Developer ツールキットに含まれる LoopBack 技術を使って在庫アプリケーションを作成します。Web フレームワークである Express フレームワーク上で稼働し、Swagger 2.0 仕様に対応している LoopBack を使用することで、スケーラブルな API を迅速に作成できます。LoopBack は、高い機能拡張性を持った、オープンソースの Node.js のフレームワークです。
+API Connect Developer ツールキットに含まれる LoopBack フレームワークを使って在庫アプリケーションを作成します。Web フレームワークである Express フレームワーク上で稼働し、Swagger 2.0 仕様に対応している LoopBack を使用することで、スケーラブルな API を迅速に作成できます。LoopBack は、高い機能拡張性を持った、オープンソースの Node.js のフレームワークです。
 
 * ほとんど、あるいは全くコードを書かずに、動的なエンド・ツー・エンドの REST API を作成できます。
 * リレーショナル・データベース、NoSQL データベース、SOAP や REST API のデータにアクセスできます。
-* モデル・リレーションシップと複雑な API へのアクセス制御を統合できます。
+* モデル間の関係と複雑な API へのアクセス制御を統合できます。
 
 LoopBack は以下で構成されます。
 
 * Node.js モジュールのライブラリー
-* アプリケーションをサポートするための Yeoman 開発ツール
+* アプリケーションをサポートするための開発ツール
 
 1. コマンドライン・ターミナルに以下のコマンドを入力し、`inventory` アプリケーションを作成します: 
 
 	```bash
-	apic loopback inventory
+	apic loopback
 	```
 
 2. アプリケーション名を入力するように求めるプロンプトが出ます。
 
 	```
-	     _-----_
-	    |       |    .--------------------------.
-	    |--(o)--|    |  Let's create a LoopBack |
-	   `---------´   |       application!       |
-	    ( _´U`_ )    '--------------------------'
-	    /___A___\    
-	     |  ~  |     
-	   __'.___.'__   
-	 ´   `  |° ´ Y `
-	 
-	? What's the name of your application? (inventory) 
+	? What's the name of your application? (ThinkIBM) inventory
 	```
 
-	前の手順でアプリケーションに名前をつけているので、デフォルト値のまま、`Enter` もしくは `Return` キーを押下します。
+	`inventory`と入力し、`Enter` もしくは `Return` キーを押下します。
 
 3. 次は、アプリケーションを作成するディレクトリーの名前を入力するように求めるプロンプトが出ます。
 
