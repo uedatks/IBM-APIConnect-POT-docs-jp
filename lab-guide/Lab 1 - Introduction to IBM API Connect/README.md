@@ -250,25 +250,25 @@
 
 1. Firefox Web ブラウザーの `+` ボタンをクリックし、新規タブを開きます。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/new-tab.png)
+	![](../img/lab1/new-tab_jp.png)
 
 2. `Portal` へのブックマークが保存されているので、このブックマークをクリックして、ポータルのホームページを開きます。 
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/portal-bookmark.png)
+	![](../img/lab1/portal-bookmark.png)
 
-3. `API Products` リンクをクリックし、ポータルに公開されている使用可能な製品を確認します。
+3. `API 製品` リンクをクリックし、ポータルに公開されている使用可能な製品を確認します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/api-products-link.png)
+	![](../img/lab1/api-products-link_jp.png)
 
 4. 製品の一覧に、公開した `hello-world` API があるはずです。
 
-  ![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/publishedAPI.png)
+  ![](../img/lab1/publishedAPI_jp.png)
 
 	今回のラボでは、hello-world アプリケーションに関する基本的な操作しか紹介していません。カスタム・メソッドの実装に関しても掘り下げて、理解を深めることをお勧めします。今後のラボでは、開発者ポータルでの作業に重点を置いていきます。たとえば、ポータルのカスタム・テーマのインストール、アプリケーションの登録、API のサブスクライブ、個別のユーザー・アプリケーションを使ったテスト実施などに触れていきます。
 
 5. `Firefox` Web ブラウザーを閉じます。複数のタブを閉じるときの警告が表示された場合、今後通知を受け取るオプションをオフにして、`Close Tabs` ボタンをクリックします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/close-firefox.png)
+	![](../img/lab1/close-firefox_jp.png)
 
 6. ターミナルで `control+c` のショートカット・キーを使用して API Designer を終了します。
 
