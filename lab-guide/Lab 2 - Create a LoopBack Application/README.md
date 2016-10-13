@@ -296,18 +296,17 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 
 	> ![][troubleshooting]
 	> 
-	> The first time you invoke the API, you may receive an error. The error occurs becuase the browser does not trust the self-signed certificate from the MicroGateway. To resolve the error, click on the link in the response window and accept the certificate warning.
+	> 初めてAPIにアクセスする場合、エラーが表示されることがあります。CORS の問題を示すエラー・メッセージが表示される場合、お使いのブラウザーの証明書に問題があります。修復するために提示されたリンクをクリックして、証明書を受け入れてください。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/cert-error.png)
+	![](../img/lab2/cert-error_jp.png)
 
-9. 終了したら、API Explorer に戻り、`Call operation` ボタンを再度クリックします。
+9. 終了したら、API Explorer に戻り、`操作の呼び出し` ボタンを再度クリックします。
 
-10. スクロールダウンし、`Request` および `Response` ヘッダーを確認します。 
+10. スクロールダウンし、`要求` および `応答` ヘッダーを確認します。 
 
 	```text
-	Request
-	GET https://localhost:4002/inventory/items
-	APIm-Debug: true
+	要求
+	GET https://localhost:4002/api/items
 	Content-Type: application/json
 	Accept: application/json
 	X-IBM-Client-Id: default
@@ -315,13 +314,12 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 	```
 
 	```text
-	Response
-	Code: 200 OK
-	Headers:
+	応答
+	コード: 200 OK
+	ヘッダー:
 	content-type: application/json; charset=utf-8
 	x-ratelimit-limit: 100
 	x-ratelimit-remaining: 99
-	x-ratelimit-reset: 3599999
 	```
 
 11. さらに下へスクロールすると、GET 要求に対し返されたペイロードが表示されています。
@@ -329,13 +327,13 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 	```json
 	[
 		{
+			"id": 1,
 			"name": "Dayton Meat Chopper",
 			"description": "Punched-card tabulating machines and time clocks...",
 			"img": "images/items/meat-chopper.jpg",
 			"img_alt": "Dayton Meat Chopper",
 			"price": 4599.99,
-			"rating": 0,
-			"id": 5
+			"rating": 0
 		},
 		...
 	]
@@ -349,9 +347,9 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 	}
 	```
 
-13. `Run` の画面に戻り、`Stop` ボタンをクリックして、在庫アプリケーションと MicroGateway を停止します。
+13. 画面下の `Stop` ボタンをクリックして、在庫アプリケーションと MicroGateway を停止します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/stop-application.png)
+	![](../img/lab2/stop-application_jp.png)
 
 ## 2.8 - MongoDB データ・ソースの作成
 
