@@ -157,21 +157,21 @@ API はデータ・ソースを使ってバックエンドのデータ・レポ�
 
 このセクションでは、`inventory` API の `item` データ・モデルを定義し、MySQL データ・ソースに関連付けます。LoopBack はデータ・モデル駆動のフレームワークです。データ・モデルのプロパティーが、API の要求および応答ペイロードの JSON エレメントになります。
 
-1. `Models` タブをクリックします。
+1. `モデル` タブをクリックします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/api-designer-model-design-page.png)
+	![](../img/lab2/api-designer-model-design-page_jp.png)
 	
-2. `+ Add` ボタンをクリックします。
+2. `+ 追加` ボタンをクリックします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/api-designer-model-design-page-add-button.png)
+	![](../img/lab2/api-designer-model-design-page-add-button_jp.png)
 	
-3. 「New LoopBack Model」ダイアログに、モデル名として `item` を入力し、`New` ボタンをクリックします。
+3. 「新規ループバック・モデル」ダイアログに、モデルの名前として `item` を入力し、`新規作成` ボタンをクリックします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/api-designer-model-design-page-new-model.png)
+	![](../img/lab2/api-designer-model-design-page-new-model_jp.png)
 
-4. item モデルのモデル編集ページが表示されたら、`mysql-connection` データ・ソースを選択します。
+4. item モデルのモデル編集ページが表示されたら、データ・ソースに作成した `mysql-connection` を選択します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/api-designer-model-datasource.png)
+	![](../img/lab2/api-designer-model-datasource_jp.png)
 
 ## 2.6 - `item` モデルのプロパティーの作成
 
