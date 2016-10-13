@@ -155,7 +155,37 @@ API はデータ・ソースを使ってバックエンドのデータ・レポ�
 
 ## 2.5 - 在庫品目 (item) のモデルの作成
 
-このセクションでは、`inventory` API の `item` データ・モデルを定義し、MySQL データ・ソースに関連付けます。LoopBack はデータ・モデル駆動のフレームワークです。データ・モデルのプロパティーが、API の要求および応答ペイロードの JSON エレメントになります。
+このセクションでは、`inventory` API の `item` データ・モデルを作成します。LoopBack はデータ・モデル駆動のフレームワークです。データ・モデルのプロパティーが、API の要求および応答ペイロードの JSON エレメントになります。MySQL データ・ソースからモデル定義を自動生成します。
+
+1. `データ・ソース` タブをクリックします。
+
+	![](../img/lab2/api-designer-datasource-page_jp.png)
+	
+2. `mysql-connection` データ・ソースの `歯車` アイコンをクリックし、`Discover Model`をクリックします。
+
+	![](../img/lab2/api-designer-datasource-page-discovermodel_jp.png)
+	
+3. 「Discover Models from: server.mysql-connection」ダイアログで、 `item` テーブルから、`Select Properties` ボタンをクリックします。
+
+	![](../img/lab2/api-designer-datasource-discoverfrom_jp.png)
+
+4. 「Select Properties: item」ダイアログで、全てのプロパティーが選択されていることを確認し、`選択` ボタンをクリックします。
+
+	![](../img/lab2/api-designer-datasource-discover-select-properties_jp.png)
+
+5. `Generate` ボタンをクリックします。
+
+	![](../img/lab2/api-designer-datasource-discover-generate_jp.png)
+
+6. 生成が終了すると、`モデル` タブが開き、`item` モデルが生成されていることが確認できます。
+
+	![](../img/lab2/api-designer-datasource-generate-model_jp.png)
+
+	> ![][info]
+	> 
+	> `Discovery Model` は、限られたDBでのみ利用できる機能です。MySQLのほかに、PostgreSQL、Oracle、SQL Serverで利用ができます。LoopBackのDiscoverに関する詳しい情報は以下リンクを参照してください:
+	> <http://loopback.io/doc/en/lb2/Discovering-models-from-relational-databases.html>
+
 
 1. `モデル` タブをクリックします。
 
