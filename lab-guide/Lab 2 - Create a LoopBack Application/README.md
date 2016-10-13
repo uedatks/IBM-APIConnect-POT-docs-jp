@@ -434,10 +434,9 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 	? Enter the model name:  review
 	? Select the data-source to attach review to:
 		> mongodb-connecton (mongodb)
-	? Select models base class:
+	? Select model's base class
 		> PersistedModel
 	? Expose review via the REST API? (Y/n):  N
-	? Custom plural form (used to build REST URL):
 	? Common model or server only?
 		> common
 	```
@@ -453,7 +452,7 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 	? Property type:
 		> date
 	?Required? Y
-	?Default value [leave blank for none]: <leave blank>
+	?Default value [leave blank for none]: <何も入力しないでEnter>
 
 	```
 
@@ -466,7 +465,7 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 	? Property type:
 		> string
 	? Required? N
-	? Default value [leave blank for none]: <leave blank>
+	? Default value [leave blank for none]: <何も入力しないでEnter>
 	```
 
 6. 次は、`reviewer_email` プロパティーを追加します:
@@ -478,7 +477,7 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 	? Property type:
 		> string
 	? Required? N
-	? Default value [leave blank for none]: <leave blank>
+	? Default value [leave blank for none]: <何も入力しないでEnter>
 
 	```
 
@@ -491,7 +490,7 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 	? Property type:
 		> string
 	? Required? N
-	? Default value [leave blank for none]: <leave blank>
+	? Default value [leave blank for none]: <何も入力しないでEnter>
 	```
 
 8. 最後に品目の `rating` プロパティーを追加します:
@@ -503,10 +502,20 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 	? Property type:
 		> number
 	? Required? Y
-	? Default value [leave blank for none]: <leave blank>
+	? Default value [leave blank for none]: <何も入力しないでEnter>
 	```
 
-9. ウィザードを閉じるには、次にレビュー・プロパティーを追加するか聞かれたときに `Enter` または `Return` を押してください。
+9. ウィザードを閉じるには、次にレビュー・プロパティーを追加するか聞かれたときに `Enter` または `Return` を押してください。最後に swagger と product の定義が更新されたことが表示されます。
+
+	```text
+	Let's and another review property.
+	Enter an empty property name when done.
+	? Property name: <何も入力しないでEnter>
+	Done running LoopBack generator
+
+	Updating swagger and product definitions
+	Created /home/student/ThinkIBM/inventory/definitions/inventory.yaml swagger description
+	```
 
 ## 2.10 - `item` と `review` データ・モデルの関連付け
 
