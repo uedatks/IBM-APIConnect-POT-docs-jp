@@ -184,6 +184,7 @@ API はデータ・ソースを使ってバックエンドのデータ・レポ�
 	> ![][info]
 	> 
 	> `Discovery Model` は、限られたDBでのみ利用できる機能です。MySQLのほかに、PostgreSQL、Oracle、SQL Serverで利用ができます。LoopBackのDiscoverに関する詳しい情報は以下リンクを参照してください:
+	>
 	> <http://loopback.io/doc/en/lb2/Discovering-models-from-relational-databases.html>
 
 
