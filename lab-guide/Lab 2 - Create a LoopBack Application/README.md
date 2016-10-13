@@ -155,47 +155,99 @@ API はデータ・ソースを使ってバックエンドのデータ・レポ�
 
 ## 2.5 - 在庫品目 (item) のモデルの作成
 
-このセクションでは、`inventory` API の `item` データ・モデルを作成します。LoopBack はデータ・モデル駆動のフレームワークです。データ・モデルのプロパティーが、API の要求および応答ペイロードの JSON エレメントになります。MySQL データ・ソースからモデル定義を自動生成します。
+このセクションでは、`inventory` API の `item` データ・モデルを定義し、MySQL データ・ソースに関連付けます。LoopBack はデータ・モデル駆動のフレームワークです。データ・モデルのプロパティーが、API の要求および応答ペイロードの JSON エレメントになります。
 
-1. `データ・ソース` タブをクリックします。
+1. `モデル` タブをクリックします。
 
-	![](../img/lab2/api-designer-datasource-page_jp.png)
+	![](../img/lab2/api-designer-model-design-page_jp.png)
 	
-2. `mysql-connection` データ・ソースの `歯車` アイコンをクリックし、`Discover Model`をクリックします。
+2. `+ 追加` ボタンをクリックします。
 
-	![](../img/lab2/api-designer-datasource-page-discovermodel_jp.png)
+	![](../img/lab2/api-designer-model-design-page-add-button_jp.png)
 	
-3. 「Discover Models from: server.mysql-connection」ダイアログで、 `item` テーブルから、`Select Properties` ボタンをクリックします。
+3. 「New LoopBack Model」ダイアログに、モデル名として `item` を入力し、`新規作成` ボタンをクリックします。
 
-	![](../img/lab2/api-designer-datasource-discoverfrom_jp.png)
+	![](../img/lab2/api-designer-model-design-page-new-model_jp.png)
 
-4. 「Select Properties: item」ダイアログで、全てのプロパティーが選択されていることを確認し、`選択` ボタンをクリックします。
+4. item モデルのモデル編集ページが表示されたら、`mysql-connection` データ・ソースを選択します。
 
-	![](../img/lab2/api-designer-datasource-discover-select-properties_jp.png)
+	![](../img/lab2/api-designer-model-datasource_jp.png)
 
-5. `Generate` ボタンをクリックします。
+## 2.6 - `item` モデルのプロパティーの作成
 
-	![](../img/lab2/api-designer-datasource-discover-generate_jp.png)
+MySQL データベースの item 表には、6 の列があり、これらもマッピングが必要です。item モデルのプロパティーを作成する手順は以下のとおりです: 
 
-6. 生成が終了すると、`モデル` タブが開き、`item` モデルが生成されていることが確認できます。
+1. **Properties** セクションの `+` ボタンをクリックします。
 
-	![](../img/lab2/api-designer-datasource-generate-model_jp.png)
+2. `item` データ・モデルは 6 つのプロパティーで構成されます。以下のデータを使用して各プロパティーを追加します:
+
+	> Required: `yes`
+	
+	> Property Name: `name`
+	
+	> Type: `string`
+	
+	> Description: `item name`
+	
+	> ---
+	
+	> Required: `yes`
+	
+	> Property Name: `description`
+	
+	> Type: `string`
+	
+	> Description: `item description`
+	
+	> ---
+	
+	> Required: `yes`
+	
+	> Property Name: `img`
+	
+	> Type: `string`
+	
+	> Description: `location of item image`
+	
+	> ---
+	
+	> Required: `yes`
+	
+	> Property Name: `img_alt`
+	
+	> Type: `string`
+
+	> Description: `item image title`
+	
+	> ---
+	
+	> Required: `yes`
+	
+	> Property Name: `price`
+	
+	> Type: `number`
+	
+	> Description: `item price`
+	
+	> ---
+	
+	> Required: `no`
+	
+	> Property Name: `rating`
+	
+	> Type: `number`
+	
+	> Description: `item rating`
 
 
-7. `item` をクリックすると、プロパティーが正しく設定されていることも確認できます。
 
-	![](../img/lab2/api-designer-datasource-generate-model-property_jp.png)
+1. ページの最上部までスクロールし、`Save` ボタンをクリックし、データ・モデルを保存します。
 
-	> ![][info]
-	> 
-	> `Discovery Model` は、限られたDBでのみ利用できる機能です。MySQLのほかに、PostgreSQL、Oracle、SQL Serverで利用ができます。LoopBackのDiscoverに関する詳しい情報は以下リンクを参照してください:
-	>
-	> <http://loopback.io/doc/en/lb2/Discovering-models-from-relational-databases.html>
+	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/api-designer-model-design-page-model-properties-save.png)
 
+2. `All Models` リンクをクリックし、API Designer のメイン・ページに戻ります。
 
-8. ページの最上部までスクロールし、`すべてのモデル` リンクをクリックし、API Designer のメイン・ページに戻ります。
-
-## 2.6 - API の検証
+## 2.7 - API の検証
 
 API が正しくマッピングされ、MySQL データ・ソースとインターフェースできることを確認するために、サーバーを実行し API のテストを実施します。
 
