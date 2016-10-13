@@ -198,45 +198,47 @@
 
 # 1.4	-  API の開発者ポータルへの公開
 
-1. `Publish` アイコンをクリックします。
+1. `公開` アイコンをクリックします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/publishButton.png)
+	![](../img/lab1/publishButton_jp.png)
 
-2. メニューから `Add and Manage Targets` を選択します。
+2. メニューから `ターゲットの追加および管理` を選択します。
 
-3. `Add a different target` を選択します。
+3. `別のターゲットを追加` を選択します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/add-target.png)
+	![](../img/lab1/add-target_jp.png)
 
-4. IBM API Connect 管理サーバーへ接続するための接続情報を入力し、`Sign in` ボタンをクリックします。
+4. IBM API Connect 管理サーバーへ接続するための接続情報を入力し、`サインイン` ボタンをクリックします。
 
-	> API Connect host address: `mgr.think.ibm`
+	> API Connect のホスト・アドレス: `mgr.think.ibm`
 	
-	> Username: `student@think.ibm`
+	> ユーザー名: `student@think.ibm`
 	
-	> Password: `Passw0rd!`  
+	> パスワード: `Passw0rd!`  
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/publish-target-signin.png)
+	![](../img/lab1/publish-target-signin_jp.png)
 
-5. "Select an organization and catalog" 画面で、`Sandbox` カタログを選択し、`Next` ボタンをクリックします。
+5. "組織およびカタログの選択" 画面で、`Sandbox` カタログを選択し、`次へ` ボタンをクリックします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/publish-sandbox-catalog.png)
+	![](../img/lab1/publish-sandbox-catalog_jp.png)
 
-6. "Select an App" 画面では、`None` アプリケーションを選択し、`Save` ボタンをクリックします。
+6. "アプリケーションの選択" 画面では、`なし` アプリケーションを選択し、`保存` ボタンをクリックします。
+
+	![](../img/lab1/select-app_jp.png)
 
 	これで、オフラインのツールキット環境を中央管理サーバーと対話させるための設定が整いました。
 
-7. `Publish` ボタンを再度クリックし、ターゲット (グレーの部分) を選択します。
+7. `公開` ボタンを再度クリックし、ターゲット (グレーの部分) を選択します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/publish-target.png)
+	![](../img/lab1/publish-target_jp.png)
 
 8. ここで公開する API を指定することができます。例えばプロジェクトで複数の API 製品を扱っている場合などに、公開したい特定の API を選択することができます。
 	
-	また、API をステージングにとどめるオプションもあります。「ステージングのみ」のアクションでは、構成を管理サーバーにプッシュしますが、使用に向けて公開はしません。ステージングのみを実行する理由としては、ユーザー権限がステージングに限定されている、もしくは製品の公開は違うグループが担当しているなどが考えられます。
+	また、API をステージングにとどめるオプションもあります。「ステージのみ」のアクションでは、構成を管理サーバーにプッシュしますが、使用に向けて公開はしません。ステージングのみを実行する理由としては、ユーザー権限がステージングに限定されている、もしくは製品の公開は違うグループが担当しているなどが考えられます。
 	
-	`Publish` ボタンをクリックします。
+	`公開` ボタンをクリックします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/publish-api.png)
+	![](../img/lab1/publish-api_jp.png)
 
 9. `Publish` ボタンをクリックすると、開発者ポータルから API が使用できるようになります。
 
