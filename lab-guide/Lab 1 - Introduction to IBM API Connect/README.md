@@ -45,7 +45,7 @@
 	apic loopback
 	```
 	
-	このコマンドでアプリケーション開発ツールが起動し、新規開発プロジェクトの作業をサポートしてくれます。アプリケーション名に hello-world を入力します。次の質問に対しては、Enterキーを押します。アプリケーション種類に関しては、 デフォルトの notes を選択し、Enterキーを押します。
+	このコマンドでアプリケーション開発ツールが起動し、新規開発プロジェクトの作業をサポートしてくれます。アプリケーション名に hello-world を入力します。次の質問に対しては、Enterキーを押します。アプリケーション種類に関しては、 notes を選択し、Enterキーを押します。
 
 	```
 	? What's the name of your application? (student) hello-world
@@ -100,36 +100,25 @@
 
 # 1.2	-  `hello-world` アプリケーションの起動
 
-1. アプリケーション開発ツールによるアプリケーション作成を学んだところで、API Designer の説明にうつりましょう。コマンドラインから以下を実行します:
+1. アプリケーション開発ツールによるアプリケーション作成を学んだところで、API Designer の説明にうつります。API Designer はブラウザーベースのツールです。コマンドラインから以下を実行します:
 
 	```bash
 	apic edit
 	```
-Bluemix へログインせずに起動する場合は以下を実行します:
+ブラウザーが起動し、API Designer が起動します。BluemixにIBM IDでログインします。Bluemix へログインせずに起動する場合は以下を実行します:
 
 	```bash
 	SKIP_LOGIN=true apic edit
 	```
 
-	```text
-	TODO: add instructions for signing in to bluemix
-	```
 
-2. `run` ボタンをクリックして、アプリケーション・ランチャーを開き、hello-world サービスをテストします。
+2. hello-world サービスをテストします。画面一番下の `再生` ボタンをクリックして、アプリケーションを起動します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/run.png)
+	![](../img/lab1/run_jp.png)
 	
-3. 次に、`start` ボタンをクリックし、`hello-world` アプリケーションを起動します。
+3. 起動が完了すると、同じく画面一番下に、以下のような画面が表示されます。アプリケーションが稼働すると、画面の右側に Stop と Restart のボタンが表示されます。
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/start.png)
-	
-4. 起動が完了すると、以下のような画面が表示されます。
-	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/app-running.png)
-	
-5. アプリケーションが稼働し始めると、画面の右側に Stop と Restart のボタンが表示されます。
-	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/stop-restart.png)
+	![](../img/lab1/app-running.png)
 	
 	これでサービスを探索してテストする準備が整いました。
 
