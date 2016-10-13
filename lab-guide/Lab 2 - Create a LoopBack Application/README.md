@@ -169,9 +169,10 @@ API はデータ・ソースを使ってバックエンドのデータ・レポ�
 
 	![](../img/lab2/api-designer-model-design-page-new-model_jp.png)
 
-4. item モデルのモデル編集ページが表示されたら、`mysql-connection` データ・ソースを選択します。
+4. item モデルのモデル編集ページが表示されたら、データ・ソースに先ほど作成した`mysql-connection` データ・ソースを選択します。
 
 	![](../img/lab2/api-designer-model-datasource_jp.png)
+
 
 ## 2.6 - `item` モデルのプロパティーの作成
 
@@ -179,109 +180,120 @@ MySQL データベースの item 表には、6 の列があり、これらもマ
 
 1. **Properties** セクションの `+` ボタンをクリックします。
 
-2. `item` データ・モデルは 6 つのプロパティーで構成されます。以下のデータを使用して各プロパティーを追加します:
+2. `item` データ・モデルは 7 つのプロパティーで構成されます。以下のデータを使用して各プロパティーを追加します:
 
-	> Required: `yes`
+	> 必須: `yes`
 	
-	> Property Name: `name`
+	> プロパティー名: `id`
 	
-	> Type: `string`
+	> タイプ: `number`
 	
-	> Description: `item name`
+	> **ID: `yes`**
+	
+	> 説明: `id`
+	
+	> ---
+	> 必須: `yes`
+	
+	> プロパティー名: `name`
+	
+	> タイプ: `string`
+	
+	> 説明: `item name`
 	
 	> ---
 	
-	> Required: `yes`
+	> 必須: `yes`
 	
-	> Property Name: `description`
+	> プロパティー名: `description`
 	
-	> Type: `string`
+	> タイプ: `string`
 	
-	> Description: `item description`
-	
-	> ---
-	
-	> Required: `yes`
-	
-	> Property Name: `img`
-	
-	> Type: `string`
-	
-	> Description: `location of item image`
+	> 説明: `item description`
 	
 	> ---
 	
-	> Required: `yes`
+	> 必須: `yes`
 	
-	> Property Name: `img_alt`
+	> プロパティー名: `img`
 	
-	> Type: `string`
-
-	> Description: `item image title`
+	> タイプ: `string`
 	
-	> ---
-	
-	> Required: `yes`
-	
-	> Property Name: `price`
-	
-	> Type: `number`
-	
-	> Description: `item price`
+	> 説明: `location of item image`
 	
 	> ---
 	
-	> Required: `no`
+	> 必須: `no`
 	
-	> Property Name: `rating`
+	> プロパティー名: `img_alt`
 	
-	> Type: `number`
+	> タイプ: `string`
+
+	> 説明: `item image title`
 	
-	> Description: `item rating`
+	> ---
+	
+	> 必須: `yes`
+	
+	> プロパティー名: `price`
+	
+	> タイプ: `number`
+	
+	> 説明: `item price`
+	
+	> ---
+	
+	> 必須: `no`
+	
+	> プロパティー名: `rating`
+	
+	> タイプ: `number`
+	
+	> 説明: `item rating`
+
+	![](../img/lab2/api-designer-model-property_jp.png)
 
 
 
-1. ページの最上部までスクロールし、`Save` ボタンをクリックし、データ・モデルを保存します。
+3. ページの最上部までスクロールし、`Save` ボタンをクリックし、データ・モデルを保存します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/api-designer-model-design-page-model-properties-save.png)
+	![](../img/lab2/api-designer-model-design-page-model-properties-save_jp.png)
 
-2. `All Models` リンクをクリックし、API Designer のメイン・ページに戻ります。
+4. `すべてのモデル` リンクをクリックし、API Designer のメイン・ページに戻ります。
 
 ## 2.7 - API の検証
 
 API が正しくマッピングされ、MySQL データ・ソースとインターフェースできることを確認するために、サーバーを実行し API のテストを実施します。
 
-1. `Run` ボタンをクリックし、実行のページを開きます。
+1. `再生` ボタンをクリックし、`inventory` LoopBack アプリケーションを起動します。同時に、MicroGateway も起動されます。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/api-designer-run.png)
+	![](../img/lab2/api-designer-run_jp.png)
 
-2. `Start` ボタンをクリックし、`inventory` LoopBack アプリケーションを起動します。同時に、MicroGateway も起動されます。
+2. サーバーが起動するまでしばらくお待ちください。以下の画面が表示されたら、次の手順に進んでください。
 
-3. サーバーが起動するまでしばらくお待ちください。以下の画面が表示されたら、次の手順に進んでください。
+	![](../img/lab2/api-designer-running_jp.png)
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/api-designer-running.png)
+3. `探索` ボタンをクリックし、API を確認します。 
 
-4. `Explore` ボタンをクリックし、API を確認します。 
+	![](../img/lab2/api-designer-explore_jp.png)
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/api-designer-explore.png)
+4. ページの左側に、`inventory` API 用のパスの一覧が表示されます。これは、LoopBack フレームワークに `item` データ・モデルを追加したことにより、自動的に作成されたパスおよび操作です。これらの操作により、ユーザーは接続された (MySQL) データ・ソースからデータ・モデルを作成、更新、削除、照会ができます。
 
-5. ページの左側に、`inventory` API 用のパスの一覧が表示されます。これは、LoopBack フレームワークに `item` データ・モデルを追加したことにより、自動的に作成されたパスおよび操作です。これらの操作により、ユーザーは接続された (MySQL) データ・ソースからデータ・モデルを作成、更新、削除、照会できます。
-
-6. `GET /items` 操作をクリックします。
+5. `GET /items` 操作をクリックします。
 
 	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/api-designer-explore-page-get-items-api.png)
 
-7. `GET /items` 操作をクリックすることで、これに応じた正しい場所がウィンドウに表示されるよう画面が遷移します。中央のウィンドウには、操作の要約や、任意のパラメーターおよび応答が表示されます。
+6. `GET /items` 操作をクリックすることで、これに応じた正しい場所がウィンドウに表示されるよう画面が遷移します。中央のウィンドウには、操作の要約や、任意のパラメーターおよび応答が表示されます。
 
 	右側には、cURL、Ruby、Python、PHP、Java、Node、Go、Swift などさまざまなプログラミング言語やツールで API を実行するためのサンプル・コードが表示されます。
 
 	サンプル・コードのほか、ページ下には、応答例、URL、API 識別情報や API パラメーターも表示されています。
 
-8. `Call operation` ボタンが表示されるまでゆっくりとスクロールダウンします。
+7. `Call operation` ボタンが表示されるまでゆっくりとスクロールダウンします。
 
 	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/api-designer-explore-page-call-operation.png)
 
-9. `Call operation` ボタンをクリックし、API を呼び出します。
+8. `Call operation` ボタンをクリックし、API を呼び出します。
 
 
 	> ![][troubleshooting]
@@ -290,9 +302,9 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 
 	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/cert-error.png)
 
-1. 終了したら、API Explorer に戻り、`Call operation` ボタンを再度クリックします。
+9. 終了したら、API Explorer に戻り、`Call operation` ボタンを再度クリックします。
 
-2. スクロールダウンし、`Request` および `Response` ヘッダーを確認します。 
+10. スクロールダウンし、`Request` および `Response` ヘッダーを確認します。 
 
 	```text
 	Request
@@ -314,7 +326,7 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 	x-ratelimit-reset: 3599999
 	```
 
-3. さらに下へスクロールすると、GET 要求に対し返されたペイロードが表示されています。
+11. さらに下へスクロールすると、GET 要求に対し返されたペイロードが表示されています。
 
 	```json
 	[
@@ -331,7 +343,7 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 	]
 	```
 
-4. 同じ手順で、`GET /items/count` 操作もテストします。12 件の在庫品目がカウントとして返されるはずです。
+12. 同じ手順で、`GET /items/count` 操作もテストします。12 件の在庫品目がカウントとして返されるはずです。
 
 	```json
 	{
@@ -339,7 +351,7 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 	}
 	```
 
-5. `Run` の画面に戻り、`Stop` ボタンをクリックして、在庫アプリケーションと MicroGateway を停止します。
+13. `Run` の画面に戻り、`Stop` ボタンをクリックして、在庫アプリケーションと MicroGateway を停止します。
 
 	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/stop-application.png)
 
