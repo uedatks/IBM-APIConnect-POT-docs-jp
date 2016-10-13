@@ -244,7 +244,7 @@
 
 10. 製品の公開が完了するまでしばらくお待ちください。完了すると、公開に成功したことを示すメッセージが表示されます。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab1/publish-success.png)
+	![](../img/lab1/publish-success_jp.png)
 
 # 1.5	- 開発者ポータルで API を参照
 
