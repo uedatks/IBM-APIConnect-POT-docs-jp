@@ -137,7 +137,7 @@ API はデータ・ソースを使ってバックエンドのデータ・レポ�
 	>
 	> <https://www.npmjs.com/package/loopback-connector-mysql>
 
-## 2.4 - API Connect Designer の起動
+## 2.4 - API Designer の起動
 
 1. 現在のディレクトリーが `~/ThinkIBM/inventory` であることを確認し、以下のコマンドを入力します:
 
@@ -151,7 +151,7 @@ API はデータ・ソースを使ってバックエンドのデータ・レポ�
 
 	> ![][info]
 	> 
-	> この API は LoopBack アプリケーション作成時の成果物です。
+	> この API は LoopBack アプリケーション作成時に生成された成果物です。
 
 ## 2.5 - 在庫品目 (item) のモデルの作成
 
