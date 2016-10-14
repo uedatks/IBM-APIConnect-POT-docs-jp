@@ -12,11 +12,11 @@
 + Liberty ランタイム集合に LoopBack アプリケーションを公開する方法の習得
 
 ---
-# Lab 3 - このチュートリアルで利用するケース・スタディー
+# Lab 3 - このラボで利用するケース・スタディー
 
 これまでに、基本的なアプリケーション・テンプレートの作成、MySQL データ・ソースに接続する `item` データ・モデルの追加、MongoDB データ・ソースに接続する `review` データ・モデルの追加、`item` モデルおよび `review` モデル間の関係の構築を学習しました。
 
-このチュートリアルでは、リモート・フックを追加し、`inventory` アプリケーションを拡張します。リモート・フックにより、API 呼び出しのプリプロセスとポストプロセスを実行できます。たとえば、リモート・サービスへのヘッダー情報の追加や、今回のラボで学習する値の計算などの処理があります。
+このラボでは、リモート・フックを追加し、`inventory` アプリケーションを拡張します。リモート・フックにより、API 呼び出しのプリプロセスとポストプロセスを実行できます。たとえば、リモート・サービスへのヘッダー情報の追加や、今回のラボで学習する値の計算などの処理があります。
 
 その後、LoopBack 在庫アプリケーションを Liberty 集合に公開し、一般ユーザーが使用できるようにします。
 
@@ -29,19 +29,19 @@
 
 ## Lab 3.1 - アプリケーション構成の編集
 
-アプリケーションの API を公開する前に、生成された構成ファイルを編集する必要があります。生成されたアプリケーションの基本パスにはデフォルトで `/api` が使用されます。続く手順では、基本パスを `/inventory` を listen する構成に編集します。
+アプリケーションの API を公開する前に、生成された構成ファイルを編集する必要があります。生成されたアプリケーションの基本パスにはデフォルトで `/api` が使用されます。続く手順では、基本パスを `/inventory` に構成できるよう編集します。
 
 1. アプリケーションのお気に入りメニューをクリックし、`Atom` テキスト・エディターを開きます。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/launch-atom.png)
+	![](../img/lab3/launch-atom_jp.png)
 
 2. `Atom` メニューの `File > Open Folder` をクリックします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/atom-open-folder.png)
+	![](../img/lab3/atom-open-folder_jp.png)
 
-3. 「Places」メニューの `student` をクリックし、`ThinkIBM > inventory` フォルダーにナビゲートし、`OK` ボタンをクリックします。
+3. 「場所」メニューの `student` をクリックし、`ThinkIBM > inventory` フォルダーにナビゲートし、`OK` ボタンをクリックします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/atom-open-folder-inventory.png)
+	![](../img/lab3/atom-open-folder-inventory_jp.png)
 
 	> ![][info]
 	> 
@@ -49,15 +49,15 @@
 
 4. フォルダー・ツリーのメニューにある `server` フォルダーを展開し、`config.json` ファイルをクリックして、ソースを確認します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/atom-open-config.png)
+	![](../img/lab3/atom-open-config_jp.png)
 
 5. `config.json` ファイルの 2 行目にある `/api` を `/inventory` に変更します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/atom-edit-config.png)
+	![](../img/lab3/atom-edit-config_jp.png)
 
 6. `Atom` ファイル・メニューで変更を保存します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/atom-save-changes.png)
+	![](../img/lab3/atom-save-changes_jp.png)
 
 ## Lab 3.2 - リモート・フックの作成
 
