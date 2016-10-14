@@ -176,25 +176,25 @@
 	
 	![](../img/lab3/api-mgr-app-info_jp.png)
 
-6. `Add` ボタンをクリックし、API Connect サーバーと Liberty 集合サーバーのアプリケーションを関連付けます。この操作により、公開後も API Connect からアプリケーションを管理できるようにアプリケーションを登録します。
+6. `追加` ボタンをクリックし、API Connect サーバーと Liberty 集合サーバーのアプリケーションを関連付けます。この操作により、公開後も API Connect からアプリケーションを管理できるようにアプリケーションを登録します。
 
 ### 3.3.2 - API Connect とやりとりするための Developer ツールキットの構成
 
 1. `Inventory` アプリケーション・タイルにある `hyperlink` アイコンをクリックします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/app-config-link.png)
+	![](../img/lab3/app-config-link_jp.png)
 
 2. ポップアップ・ウィンドウのコンテンツを、システムのクリップボードにコピーします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/app-config-link-copy.png)
+	![](../img/lab3/app-config-link-copy_jp.png)
 
-3. ユーザー・プロファイルのアイコンをクリックし、`Log Out` を選択します。
+3. ユーザー・プロファイルのアイコンをクリックし、`サインアウト` を選択します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/api-mgr-signout.png)
+	![](../img/lab3/api-mgr-signout_jp.png)
 
 4. タブまたはブラウザー・ウィンドウの `x` をクリックして Firefox ブラウザーを閉じます。
 
-5. `Terminal Emulator` セッションに戻ります。閉じてしまった場合は、新規セッションを立ち上げてください。
+5. `Terminal` セッションに戻ります。閉じてしまった場合は、新規セッションを立ち上げてください。
 
 6. 以下のコマンドを入力し、`~/ThinkIBM/inventory` プロジェクト・フォルダーに移動します:
 
@@ -211,26 +211,34 @@
 8. API Connect 管理サーバーにログインし、開発環境のセットアップを続けます。
 
 	```bash
-	apic login --type app
+	apic login
 	```
 	
 9. プロンプトが出たら、以下の資格情報を入力します:
 
-	> Server: `mgr.think.ibm`
+	> ? Server: `mgr.think.ibm`
 	
-	> Username: `student@think.ibm`
+	> ? Username: `student@think.ibm`
 	
-	> Password: `Passw0rd!`
+	> ? Password (typing will be hidden): `Passw0rd!`
 
 ### 3.3.3 - アプリケーションの公開
 
-1. 以下を入力し、Liberty 集合サーバーが稼働していることを確認します:
+1. 以下を入力し、Liberty 集合サーバーが稼働していることを確認します。お気に入りメニューから `Firefox ウェブ・ブラウザ` を起動します。`Liberty Admin Center` ブックマークをクリックします。:
+
+	![](../img/lab3/liberty-admin-bookmark_jp.png)
+
+2. Liberty Admin Centerにアクセスできる場合、Liberty 集合サーバーが稼動しています。
+
+	![](../img/lab3/liberty-admin_jp.png)
+
+3. アクセスできない場合、以下のコマンドでLiberty 集合サーバーを起動します。
 
 	```bash
 	wlpn-controller start
 	```
 
-2. 以下のコマンドを入力し、`inventory` アプリケーションをパッケージ化して、集合サーバーへ公開します:
+4. 以下のコマンドを入力し、`inventory` アプリケーションをパッケージ化して、集合サーバーへ公開します:
 	
 	```bash
 	apic apps:publish
@@ -240,23 +248,23 @@
 	> 
 	> アプリケーションを公開するために、ここまでコマンドラインを使用してきましたが、API Designer の Web エクスペリエンスを使用してこのタスクを同様に実行することができます。
 
-3. 公開が完了すると、ターミナルにプロンプトが出ます。
+5. 公開が完了すると、ターミナルに以下出力が出ます。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/app-published.png)
+	![](../img/lab3/app-published_jp.png)
 
-4. ここで返される `host` ヘッダーは、次のラボで必要になります。
+6. ここで返される `host` ヘッダーは、次のラボで必要になります。
 
 	`host header:` 値を**ハイライト**して、**マウスの右クリック**で開くメニューから `Copy` を選択します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/app-copy-host.png)
+	![](../img/lab3/app-copy-host_jp.png)
 	
-5. タスクバーにあるメモ帳のアイコンをクリックし、`Notes` アプリケーションを開きます。
+7. タスクバーにあるメモ帳のアイコンをクリックし、`Notes` アプリケーションを開きます。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/launch-notepad.png)
+	![](../img/lab3/launch-notepad_jp.png)
 	
-6. 「host」ヘッダーを `Notes` ウィンドウに貼り付けて (`control+v` のショートカットキーを使用) 、内容がわかるような名前をつけます。
+8. 「host」ヘッダーを `Notes` ウィンドウに貼り付けて (`control+v` のショートカットキーを使用) 、内容がわかるような名前をつけます。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/notes-save-host.png)
+	![](../img/lab3/notes-save-host_jp.png)
 
 # Lab 3 - 検証
 
