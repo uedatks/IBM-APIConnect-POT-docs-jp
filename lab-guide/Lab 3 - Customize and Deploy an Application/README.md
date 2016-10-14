@@ -65,21 +65,21 @@
 
 リモート・フックに関する詳細情報は以下を参照してください。
 
-<https://docs.strongloop.com/display/public/LB/Remote+hooks>
+<http://loopback.io/doc/en/lb2/Remote-hooks.html>
 
 1. `Atom` エディターのディレクトリーを `common/models` まで展開し、`item.js` ファイルを選択します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/atom-item-file1.png)
+	![](../img/lab3/atom-item-file1_jp.png)
 
 2. このファイルを更新して、品目に対し新規レビューが送信された*後に* 実行するリモート・フック関数を新たに含めます。この関数は、特定の品目に対するレビューの平均値を計算し、MySQL データ・ソースにある品目の評価を更新します。
 
 3. 事前に用意されたサンプル・ファイルをコピーすることで、入力ミスを防ぐことができます。`Sublime Text` アプリケーションをお気に入りメニューから開きます。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/launch-sublime-text.png)
+	![](../img/lab3/launch-sublime-text_jp.png)
 	
 4. `lab_files/lab3` フォルダーまでディレクトリーを展開し、サンプルの `item.js` ファイルを選択します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/sublime-item-file.png)
+	![](../img/lab3/sublime-item-file_jp.png)
 	
 5. メニューから `Selection > Select All` を選択し、テキストをすべてハイライトします。
 
@@ -87,7 +87,7 @@
 
 7. `Atom` アプリケーションへ戻り、`item.js`ファイルのコンテンツをすべて**消去**します。クリップボードのコンテンツを貼り付けて (`control+v` もしくは `Edit > Paste`)、ファイルを更新します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/atom-item-file2.png)
+	![](../img/lab3/atom-item-file2_jp.png)
 
 	```javascript
 	module.exports = function (Item) {
@@ -136,39 +136,45 @@
 
 ### 3.3.1 - API Connect および Liberty へのアプリケーションの登録
 
-1. お気に入りメニューから `Firefox Web Browser` を起動します。
+1. お気に入りメニューから `Firefox ウェブ・ブラウザ` を起動します。
 
-	  ![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/launch-firefox.png)
+	  ![](../img/lab3/launch-firefox_jp.png)
 
 2. `API Manager` ブックマークをクリックします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/api-mgr-bookmark.png)
+	![](../img/lab3/api-mgr-bookmark_jp.png)
 
-3. 以下の資格情報を入力し、`Sign in` ボタンをクリックします:
+3. 以下の資格情報を入力し、`サインイン` ボタンをクリックします:
 
-	Username: `student@think.ibm`
+	ユーザー名: `student@think.ibm`
 	
-	Password: `Passw0rd!`
+	パスワード: `Passw0rd!`
 	
 	> ![][info]
 	> 
 	> ブラウザーにユーザー名およびパスワードが保存されている場合は、その資格情報をそのまま利用してサインインしてください。
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/api-mgr-login.png)
+	![](../img/lab3/api-mgr-login_jp.png)
 	
-4. API Manager ダッシュボードが開いたら、`+ Add` ボタンをクリックし、リストから `App` を選択します。
+4. API Manager にサインイン後、メニューを開き、`ダッシュボード`を選択します。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/api-mgr-add-app.png)
+	![](../img/lab3/api-mgr-menu_jp.png)
+	![](../img/lab3/api-mgr-menu-dashbord_jp.png)
 
-5. `Add App` フォームに以下の詳細を記入します:
 
-	> Display Name: `Inventory`
+5. ダッシュボードが開いたら、`+ 追加` ボタンをクリックし、リストから `アプリケーション` を選択します。
+
+	![](../img/lab3/api-mgr-add-app_jp.png)
+
+6. `アプリケーションの追加` フォームに以下の詳細を記入します:
+
+	> 表示名: `Inventory`
 	
-	> Name: `inventory`
+	> 名前: `inventory`
 	
-	> Collective: `AppSvr`
+	> API Connect Collective: `AppSvr`
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab3/api-mgr-app-info.png)
+	![](../img/lab3/api-mgr-app-info_jp.png)
 
 6. `Add` ボタンをクリックし、API Connect サーバーと Liberty 集合サーバーのアプリケーションを関連付けます。この操作により、公開後も API Connect からアプリケーションを管理できるようにアプリケーションを登録します。
 
