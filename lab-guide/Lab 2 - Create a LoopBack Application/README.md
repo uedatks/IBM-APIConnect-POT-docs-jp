@@ -519,9 +519,9 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 
 ## 2.10 - `item` と `review` データ・モデルの関連付け
 
-このラボの次のステップでは、`item` モデルと `review` モデルの間の関係を作成します。それぞれのモデルは、まったく異なるデータベースのエンティティーを参照しますが、API Connect はモデル間に論理的な関係を構築することができます。この論理的な関係は、item モデルの追加操作として公開できます。
+このラボの次のステップでは、`item` モデルと `review` モデルの間の関係を作成します。それぞれのモデルは、まったく異なるデータベースのエンティティーを参照しますが、LoopBack はモデル間に論理的な関係を構築することができます。この論理的な関係は、item モデルの追加操作として公開できます。
 
-1. ターミナル・セッションに以下のコマンドを入力します:
+1. ターミナルに以下のコマンドを入力します:
 
 	```bash
 	apic loopback:relation
@@ -537,15 +537,15 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 	? Choose a model to create a relationship with:
 		> review
 	? Enter the property name for the relation:  reviews
-	? Optionally enter a custom foreign key: <leave blank>
-	? Require a through model? No
+	? Optionally enter a custom foreign key: <何も入力しないでEnter>
+	? Require a through model? N
 	```
 	
 ## 2.11 - 関係の確認
 
-作成した関係を確認するために、API Connect Designer を起動し、Explore ページで操作を確認します。
+作成した関係を確認するために、API Designer を起動し、`探索` ページで操作を確認します。
 
-1. ターミナル・セッションに以下のコマンドを入力し、API Connect Designer ウィンドウを起動します:
+1. ターミナル・セッションに以下のコマンドを入力し、API Designer ウィンドウを起動します:
 
 	```bash
 	apic edit
@@ -553,17 +553,17 @@ API が正しくマッピングされ、MySQL データ・ソースとインタ�
 
 2. 「APIs」タブの `inventory` リンクをクリックします。
 
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/inventory-link.png)
+	![](../img/lab2/inventory-link_jp.png)
 
-3. API 定義の `Paths` セクションまでスクロールダウンします。
+3. API 定義の `パス` セクションまでスクロールダウンします。
 
 	品目のレビュー・データにアクセスするための API パスが ３ 件新規作成されていることを確認します:
 	
-	![](https://github.com/ibm-apiconnect/pot-onprem-docs/raw/master/lab-guide/img/lab2/new-paths.png)
+	![](../img/lab2/new-paths_jp.png)
 
 4. Firefox のタブもしくはウィンドウの `x` ボタンをクリックし、ブラウザーを閉じます。
 
-5. タスクバーから `Terminal Emulator` を選択し、コマンドラインを開きます。
+5. タスクバーから `Terminal` を選択し、コマンドラインを開きます。
 
 6. ブラウザーを閉じても、API Designer アプリケーションは動作し続けます。
 
