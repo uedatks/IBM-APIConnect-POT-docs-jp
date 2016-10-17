@@ -1,6 +1,6 @@
 ﻿# Lab 3 - `Inventory` アプリケーションのカスタマイズとデプロイメント
 
-このラボでは、Lab 2 で作成した LoopBack アプリケーションに関数を追加します。カスタム javascript コードを追加し、アプリケーションのデフォルト動作に変更を加えます。編集作業が終了したら、アプリケーションをパッケージ化し、WebSphere Liberty ランタイム集合に公開します。ここで、API Connect ソリューションがアプリケーションを管理、適用します。
+このラボでは、Lab 2 で作成した LoopBack アプリケーションに関数を追加します。カスタム javascript コードを追加し、アプリケーションのデフォルト動作に変更を加えます。編集作業が終了したら、アプリケーションをパッケージ化し、WebSphere Liberty Collective Controllerに公開します。Collective Controllerでは、アプリケーションを管理、運用することができます。
 
 ---
 # Lab 3 - 学習目標
@@ -9,7 +9,7 @@
 
 + LoopBack リモート・フックの学習
 + リモート・フックの作成方法の習得
-+ Liberty ランタイム集合に LoopBack アプリケーションを公開する方法の習得
++ Liberty Collective Controllerに LoopBack アプリケーションを公開する方法の習得
 
 ---
 # Lab 3 - このラボで利用するケース・スタディー
@@ -132,7 +132,7 @@
 
 ## Lab 3.3 - Liberty 集合へのアプリケーションの公開
 
-このセクションでは、`inventory` アプリケーションを一般ユーザーが使用できるように Liberty ランタイム集合へ公開します。
+このセクションでは、`inventory` アプリケーションを一般ユーザーが使用できるように Liberty Collective Controllerへ公開します。
 
 ### 3.3.1 - API Connect および Liberty へのアプリケーションの登録
 
@@ -203,7 +203,7 @@
 	cd ~/ThinkIBM/inventory
 	```
 
-7. ターミナルのメニュー・バーから `Edit > Paste` を選択し、クリップボードのコンテンツを貼り付けます。先ほどのステップでコマンドをコピーしなかった場合は、こちらに手入力できます:
+7. ターミナルのメニュー・バーから `Edit > Paste` を選択し、クリップボードのコンテンツを貼り付けて実行します。以下のように手入力も可能です:
 
 	```bash
 	apic config:set app=apic-app://mgr.think.ibm/orgs/sales/apps/inventory
